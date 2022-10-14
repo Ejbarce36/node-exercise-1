@@ -21,11 +21,11 @@ fs.readFile('demo.txt', 'utf8', (err, data) => {
 })
 
 if (process.argv[2] === undefined) {
-  console.log('needs an argument of path.')
+  console.log('Requires an argument of path.')
 } else if (process.argv[3] === undefined) {
-  console.log('a second argument is needed.')
+  console.log('Second argument is required.')
 } else if (process.argv[4] !== undefined && process.argv[4] !== '-n' && process.argv[4] !== '-y') {
-  console.log(`${process.argv[4]} it's not a valid argument! (Expected '-n', '-y' or undefined)`)
+  console.log(`${process.argv[4]} is not a valid argument! (Expected '-n', '-y' or undefined)`)
 } else {
   readFile(process.argv[2], 'utf8', (err, data) => {
     if (err) {
